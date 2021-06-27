@@ -6,5 +6,29 @@
       "dependsOn": [],
       "customAuth": false
     }
+  },
+  "api": {
+    "application": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 1,
+              "description": "demoapplication"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
+    }
+  },
+  "storage": {
+    "imagestorage": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }
